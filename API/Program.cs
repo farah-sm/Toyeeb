@@ -24,6 +24,7 @@ var app = builder.Build();
 builder.Services.AddCors();
 
 // Configure the HTTP request pipeline.
+// Comment
 app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
 
 app.UseAuthentication();
