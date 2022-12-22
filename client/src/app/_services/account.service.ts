@@ -44,6 +44,7 @@ setCurrentUser(user: User) {
 
   logout() {
     localStorage.removeItem('user');
+    this.currentUserSource.next(null);
   }
 
 
