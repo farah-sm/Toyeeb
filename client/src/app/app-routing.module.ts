@@ -11,15 +11,16 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent
   },
-  {
-    path: 'members', component: MemberListComponent, canActivate: [AuthGuard]
-  },
-  {
-    path: 'members/:id', component: MemberDetailComponent},
-  {
-    path: 'lists', component: ListsComponent },
-  {
-    path: 'messages', component: MessagesComponent},
+  { path: '', canActivate: [AuthGuard], runGuardsAndResolvers: 'always',
+    children: [
+    {path: 'lists', component: ListsComponent },
+    {path: 'members', component: MemberListComponent,},
+    {path: 'members/:id', component: MemberDetailComponent},
+    {path: 'messages', component: MessagesComponent},
+  
+  
+]},
+  
   {
     path: '**', component: HomeComponent, pathMatch: 'full'
   },

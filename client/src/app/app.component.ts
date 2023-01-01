@@ -10,7 +10,7 @@ import { AccountService } from './_services/account.service';
 export class AppComponent implements OnInit {
 
     // title is a variable, assigned to it is the name of the site - GoProtect / Instant / Rapid
-    title = 'Security App';
+    title = 'instntGuards';
 
 
   constructor (private accountService: AccountService) {}
